@@ -11,27 +11,37 @@
     <title>spaceQuiz</title>
 </head>
 <body>
+
+    <!-- Quiz container -->
     <section >
         <div class="container-quiz">
-            <h1>spaceQuiz</h1>
-            <div class="score-area">
-                <p>Question 1/20</p>
+            <h1><i class="fas fa-rocket"></i> spaceQuiz</h1>
+            <div class="info-area">
+                <p>Question: 1/20</p>
             </div>
-            <div class="question">
-                <h2>What is the answer to this question?</h2>
+            <div class="questions">
+                <h2>What do you really know about space?</h2>
             </div>
-            <div>
-                <input id="choice-a" class="choice" type="radio" name="answer" value="choice-one">
-                <label for="choice-a">Answer</label> 
 
-                <input id="choice-b" class="choice" type="radio" name="answer" value="choice-two">
-                <label for="choice-b">Answer</label>
-
-                <input id="choice-c" class="choice" type="radio" name="answer" value="choice-three">
-                <label for="choice-c">Answer</label>
-
-                <input id="choice-d" class="choice" type="radio" name="answer" value="choice-four">
-                <label for="choice-d">Answer</label>
+            <!-- Answer section -->
+            <div class="choice-area">
+                <h3>Choose your answer:</h3>
+                <div class="choices">
+                    <input id="choice-a" class="choice" type="radio" name="answer" value="choice-one">
+                    <label for="choice-a">Answer A</label> 
+                </div>
+                <div class="choices">
+                    <input id="choice-b" class="choice" type="radio" name="answer" value="choice-two">
+                    <label for="choice-b">Answer B</label>
+                </div>
+                <div class="choices">
+                    <input id="choice-c" class="choice" type="radio" name="answer" value="choice-three">
+                    <label for="choice-c">Answer C</label>
+                </div>
+                <div class="choices">
+                    <input id="choice-d" class="choice" type="radio" name="answer" value="choice-four">
+                    <label for="choice-d">Answer D</label>
+                </div>
             </div>
             
             <div>
@@ -40,9 +50,25 @@
         </div>
     </section>
 
+    <!-- Footer section -->
     <footer>
-        Facebook / Instagram / Youtube
+        <ul class="social-links">
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit our Youtube page (opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
+            </li>
+        </ul>
     </footer>
+
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/173aea000a.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
