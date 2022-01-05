@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+
 // Store questions and answers in this object array 
 let questions = [
     {
@@ -42,7 +43,7 @@ let questions = [
         correctAnswer: "choiceA"
     },
     {
-        question: "What force bends light rays travelling though the universe?",
+        question: "What force bends light rays travelling through the universe?",
         choiceA: "Electromagnetism",
         choiceB: "Gravity",
         choiceC: "The Strong Nuclear Force",
@@ -84,42 +85,41 @@ let questions = [
 ];
 
 let currentQuestion = 0;
-let visibleQuestion = document.getElementById("question")
+let visibleQuestion = document.getElementById("question");
+let submit = document.getElementById("next-question");
 
-let answerA = document.getElementById("answer-a")
-let answerB = document.getElementById("answer-b")
-let answerC = document.getElementById("answer-c")
-let answerD = document.getElementById("answer-d")
+let answerA = document.getElementById("answer-a");
+let answerB = document.getElementById("answer-b");
+let answerC = document.getElementById("answer-c");
+let answerD = document.getElementById("answer-d");
 
-
+let nextQuestion = document.getElementById("next-question");
+nextQuestion.addEventListener("click", getNextQuestion);
 
 startQuiz();
 
+// Start the quiz
 function startQuiz() {
     let currentQuestionData = questions[currentQuestion];
 
     visibleQuestion.innerHTML = currentQuestionData.question;
-    answerA.innerHTML = currentQuestionData.choiceA
-    answerB.innerHTML = currentQuestionData.choiceB
-    answerC.innerHTML = currentQuestionData.choiceC
-    answerD.innerHTML = currentQuestionData.choiceD
-
-    currentQuestion++;
+    answerA.innerHTML = currentQuestionData.choiceA;
+    answerB.innerHTML = currentQuestionData.choiceB;
+    answerC.innerHTML = currentQuestionData.choiceC;
+    answerD.innerHTML = currentQuestionData.choiceD;
 }
-
-
-
-
-
-
-let nextQuestion = document.getElementById("next-question");
-
-nextQuestion.addEventListener("click", getNextQuestion);
 
 function getNextQuestion() {
-    console.log("Next Question Coming Up!")
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        startQuiz();
+    } else {
+        // show user score
+    }
 }
 
 
 
 
+// deselect answers functions
