@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Store questions and answers in this object array 
 let questions = [
     {
@@ -82,6 +83,31 @@ let questions = [
     },
 ];
 
+let currentQuestion = 0;
+let visibleQuestion = document.getElementById("question")
+
+let answerA = document.getElementById("answer-a")
+let answerB = document.getElementById("answer-b")
+let answerC = document.getElementById("answer-c")
+let answerD = document.getElementById("answer-d")
+
+
+
+startQuiz();
+
+function startQuiz() {
+    let currentQuestionData = questions[currentQuestion];
+
+    visibleQuestion.innerHTML = currentQuestionData.question;
+    answerA.innerHTML = currentQuestionData.choiceA
+    answerB.innerHTML = currentQuestionData.choiceB
+    answerC.innerHTML = currentQuestionData.choiceC
+    answerD.innerHTML = currentQuestionData.choiceD
+
+    currentQuestion++;
+}
+
+
 
 
 
@@ -93,3 +119,7 @@ nextQuestion.addEventListener("click", getNextQuestion);
 function getNextQuestion() {
     console.log("Next Question Coming Up!")
 }
+
+
+
+
