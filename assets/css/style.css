@@ -57,7 +57,7 @@ i {
 
 .questions {
     width: 80%;
-    height: 5rem;
+    height: 4rem;
     margin: 1rem auto 1rem auto;
     text-align: center;
     font-size: 115%;
@@ -73,8 +73,9 @@ hr {
 h3 {
     font-family: "PT Serif";
     height: 2rem;
-    font-size: 1.3rem;
+    font-size: 120%;
     margin: 1rem;
+    padding-bottom: 0.2rem;
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -101,7 +102,7 @@ input[type="radio"] {
 }
 
 label {
-    width: 30rem;
+    width: 100%;
     background: #fff;
     display: inline-flex;
     align-items: center;
@@ -147,7 +148,6 @@ footer {
     width: 100%;
     height: 10rem;
     background-color: #062c43;
-    position: absolute;
 }
 
 ul {
