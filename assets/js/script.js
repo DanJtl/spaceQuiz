@@ -98,7 +98,9 @@ nextQuestion.addEventListener("click", getNextQuestion);
 
 startQuiz();
 
-// Start the quiz
+/**
+ * Load the site with the quiz questions and answers
+ */
 function startQuiz() {
     let currentQuestionData = questions[currentQuestion];
 
@@ -116,10 +118,9 @@ function getNextQuestion() {
         startQuiz();
     } else {
         // show user score
+        
     }
 }
 
 
-
-
-// deselect answers functions
+// deselect answers function
