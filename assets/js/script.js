@@ -131,7 +131,7 @@ function displayScore() {
 
 }
 
-function UncheckRadioButtons() {
+function uncheckRadioButtons() {
 
    for( i = 0 ; i < option.length ; i++ )
    {

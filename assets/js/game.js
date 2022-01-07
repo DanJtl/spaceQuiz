@@ -1,11 +1,28 @@
-let quizData = [
+/*jshint esversion: 6 */
+
+// Define required variables
+
+let currentQuestion = 0;
+let score = 0;
+let answerA = document.getElementById("answer-a");
+let answerB = document.getElementById("answer-b");
+let answerC = document.getElementById("answer-c");
+let answerD = document.getElementById("answer-d");
+let choices = document.getElementsByClassName("choice");
+let containerQuiz = document.getElementById("quiz-container");
+let choice = document.getElementsByClassName("choice");
+
+// Store questions and answers in this object array
+
+let questions = [
+
     {
         question: "Which planet is closest to the sun?",
         choiceA: "Jupiter",
         choiceB: "Neptune",
         choiceC: "Mars",
         choiceD: "Mercury",
-        correctAnswer: 4
+        correctAnswer: "choiceD"
     },
     {
         question: "The moon called Titan orbits which planet?",
@@ -13,7 +30,7 @@ let quizData = [
         choiceB: "Uranus",
         choiceC: "Venus",
         choiceD: "Earth",
-        correctAnswer: 1
+        correctAnswer: "choiceA"
     },
     {
         question: "How old is the universe in years?",
@@ -21,7 +38,7 @@ let quizData = [
         choiceB: "13.8 billion years old",
         choiceC: "50 billion years old",
         choiceD: "750 million years old",
-        correctAnswer: 2
+        correctAnswer: "choiceB"
     },
     {
         question: "What is the largest planet in our solar system?",
@@ -29,7 +46,7 @@ let quizData = [
         choiceB: "Saturn",
         choiceC: "Jupiter",
         choiceD: "Neptune",
-        correctAnswer: 3
+        correctAnswer: "choiceC"
     },
     {
         question: "How old is the sun?",
@@ -37,7 +54,7 @@ let quizData = [
         choiceB: "10.6 billion years old",
         choiceC: "4.6 million years old",
         choiceD: "10.6 million years old",
-        correctAnswer: 1
+        correctAnswer: "choiceA"
     },
     {
         question: "What force bends light rays travelling through the universe?",
@@ -45,7 +62,7 @@ let quizData = [
         choiceB: "Gravity",
         choiceC: "The Strong Nuclear Force",
         choiceD: "The Weak Nuclear Force",
-        correctAnswer: 2
+        correctAnswer: "choiceB"
     },
     {
         question: "What entity boasts a gravitational pull so powerful even light cannot escape?",
@@ -53,7 +70,7 @@ let quizData = [
         choiceB: "A black hole",
         choiceC: "A supergiant star",
         choiceD: "A nebula",
-        correctAnswer: 2
+        correctAnswer: "choiceB"
     },
     {
         question: "What is the most common type of star found in the Milky Way?",
@@ -61,7 +78,7 @@ let quizData = [
         choiceB: "Protostars",
         choiceC: "White dwarf stars",
         choiceD: "Red giant stars",
-        correctAnswer: 1
+        correctAnswer: "choiceA"
     },
     {
         question: "How many Earths could fit inside the sun?",
@@ -69,7 +86,7 @@ let quizData = [
         choiceB: "10 000",
         choiceC: "550 000",
         choiceD: "1 300 000",
-        correctAnswer: 4
+        correctAnswer: "choiceD"
     },
     {
         question: "How many planets are there in the solar system?",
@@ -77,71 +94,62 @@ let quizData = [
         choiceB: "9",
         choiceC: "8",
         choiceD: "7",
-        correctAnswer: 3
+        correctAnswer: "choiceC"
     },
 ];
 
-let quiz = document.getElementsById(container-quiz);
-let answerEls = document.querySelectorAll(".choice");
-let questionEl = document.getElementById("question");
-let a_text = document.getElementById("answer-a");
-let b_text = document.getElementById("answer-b");
-let c_text = document.getElementById("answer-c");
-let d_text = document.getElementById("answer-d");
-const submitBtn = document.getElementById("next-question");
+// Get reference to button and add event listener
 
-let currentQuiz = 0;
-let score = 0;
+let nextQuestion = document.getElementById("next-question");
+nextQuestion.addEventListener("click", getNextQuestion);
 
-loadQuiz();
+displayQuestion();
 
-function loadQuiz() {
-    deselectAnswers();
+/**
+* Load the site with quiz questions and answers
+*/
+function displayQuestion() {
 
-    const currentQuizData = quizData[currentQuiz];
+    // deselct question function
 
-    questionEl.innerHTML = currentQuizData.question;
-    answerA.innerHTML = currentQuizData.choiceA;
-    answerB.innerHTML = currentQuizData.choiceB;
-    answerC.innerHTML = currentQuizData.choiceC;
-    answerD.innerHTML = currentQuizData.choiceD;
+    let currentQuestionData = questions[currentQuestion];
+
+    let visibleQuestion = document.getElementById("question");
+    visibleQuestion.innerHTML = currentQuestionData.question;
+    answerA.innerHTML = currentQuestionData.choiceA;
+    answerB.innerHTML = currentQuestionData.choiceB;
+    answerC.innerHTML = currentQuestionData.choiceC;
+    answerD.innerHTML = currentQuestionData.choiceD;
 }
 
-function getSelected() {
-    let answer = undefined;
+function getNextQuestion() {
+    // learned "checked radiobutton" code here: https://tinyurl.com/59ddenvd
 
-    answerEls.forEach((answerEl) => {
-        if (answerEl.checked) {
-            answer = answerEl.id;
-        }
-    });
+    if (document.querySelectorAll('input[type="radio"]:checked').length === 0) {
+        alert("Make your choice please...");
 
-    return answer;
-}
+    } else if (currentQuestion < questions.length-1) {
 
-function deselectAnswers() {
-    answerEls.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
-}
+        currentQuestion++;
+        deselectAnswer();
+        displayQuestion();
 
-submitBtn.addEventListener("click", () => {
-    // check to see the answer
-    const answer = getSelected();
-
-    if (answer) {
-        if (answer === quizData[currentQuiz].correct) {
-            score++;
-        }
-
-        currentQuiz++;
-        if (currentQuiz < quizData.length) {
-            loadQuiz();
-        } else {
-            containerQuiz.innerHTML = `
-                <h2>You answered correctly at ${score}/${quizData.length} questions.</h2>
-                <button onclick="location.reload()">Reload</button>
-            `;
-        }
+    } else {
+        // learned reload button here: https://tinyurl.com/39e3f3pn
+        containerQuiz.innerHTML = `
+        <h2>You scored: ${score}/${questions.length}</h2>
+        <button id="reloadButton" onClick="window.location.reload()">Reload Quiz!</button>
+        `;
     }
-});
+}
+
+function deselectAnswer() {
+
+    // learned code here: https://tinyurl.com/yc5a78th
+    for (i = 0; i < choice.length; i++)
+    {
+        choice[i].checked = false;
+    }
+}
+
+// deselect answers function
