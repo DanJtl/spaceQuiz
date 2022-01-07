@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 // Define required variables
+
 let currentQuestion = 0;
 let score = 0;
 let answerA = document.getElementById("answer-a");
@@ -8,9 +9,13 @@ let answerB = document.getElementById("answer-b");
 let answerC = document.getElementById("answer-c");
 let answerD = document.getElementById("answer-d");
 let choices = document.getElementsByClassName("choice");
+let containerQuiz = document.getElementById("quiz-container");
+let choice = document.getElementsByClassName("choice");
 
-// Store questions and answers in this object array 
+// Store questions and answers in this object array
+
 let questions = [
+
     {
         question: "Which planet is closest to the sun?",
         choiceA: "Jupiter",
@@ -94,17 +99,18 @@ let questions = [
 ];
 
 // Get reference to button and add event listener
+
 let nextQuestion = document.getElementById("next-question");
 nextQuestion.addEventListener("click", getNextQuestion);
 
 displayQuestion();
 
 /**
- * Load the site with quiz questions and answers
- */
+* Load the site with quiz questions and answers
+*/
 function displayQuestion() {
 
-    // deselct question function
+    deselectAnswer()
 
     let currentQuestionData = questions[currentQuestion];
 
@@ -117,27 +123,31 @@ function displayQuestion() {
 }
 
 function getNextQuestion() {
-    
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
+    // learned "checked radiobutton" code here: https://tinyurl.com/59ddenvd
+
+    if (document.querySelectorAll('input[type="radio"]:checked').length === 0) {
+        alert("Make your choice please...");
+
+    } else if (currentQuestion < questions.length-1) {
+
+        currentQuestion++;
+        deselectAnswer();
         displayQuestion();
+
     } else {
-        displayScore();  
-        displayQuestion();
+        // learned reload button here: https://tinyurl.com/39e3f3pn
+        containerQuiz.innerHTML = `
+        <h2 class="score">You scored: ${score}/${questions.length}</h2>
+        <button class="playAgain" onClick="window.location.reload()">PLay again!</button>
+        `;
     }
 }
 
-function displayScore() {
+function deselectAnswer() {
 
+    // learned code here: https://tinyurl.com/yc5a78th
+    for (i = 0; i < choice.length; i++)
+    {
+        choice[i].checked = false;
+    }
 }
-
-function uncheckRadioButtons() {
-
-   for( i = 0 ; i < option.length ; i++ )
-   {
-        option[i].checked = false;
-   }
-}
-
-
-// deselect answers function

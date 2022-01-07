@@ -165,3 +165,26 @@ li i {
     padding: 0 1.5rem;
 }
 
+.score {
+    font-size: 250%;
+    text-align: center;
+    position: relative;
+    top: 35%;
+}
+
+.playAgain {
+    width: 13rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #054569;
+    color: #fff;
+    margin: 2rem auto 2rem auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px 2px #000000;
+    transition: 0.2s;
+    cursor: pointer;
+    position: relative;
+    top: 35%;
+}
