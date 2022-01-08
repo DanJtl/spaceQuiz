@@ -55,16 +55,14 @@ A simple design that provide clear links to all social media platforms. The link
 ---
 
 ### **User Story**
-
-A worrying aging women that is starting to get wrinkles, want some tips and advice to slow down the process so that she can feel more confident about herself.
+A person interested in space wants to test their knowledge of the subject by doing a fun quiz. Once the quiz is done, the user can redo the quiz to get a higher score or challenge family and friends to try to beat him. 
 
 ### **Goals For Website Owners** 
-
-The goal of the website is to capture leads. It provides the user with quick and easy content that explains the problem they are experiencing. The content leads them on to tips that ultimately encourage the user to seek the help of professionals if they are serious. And to make it totally risk-free for the users, the website offers them a free consultation. 
+The goal of the website is to entertain the user with a quiz. It provides the user with spacerelated questions to give the user a challenge in their area of interest. The user will also leave the quiz with a new knowledge. 
 
 ### **Wireframe** ###
-Wireframe created in Balsamiq - design of the home page.
-![Wireframe design](assets/images/wireframe.png)
+Was inspired by this design when I built spaceQuiz. 
+![Wireframe design](assets/images/example_design.jpg)
 ***
 
 ## **Testing And Validation**
@@ -128,7 +126,7 @@ Link to the website: https://danjtl.github.io/jonnas-anti-age/index.html
 
 ## **Credits** ##
 ---
-
+Credit to my brother Jimmy Junttila to help me solve a few functions. 
 ### **Images** ###
 Pictures is taken from https://www.canva.com/
 ### **Colors** ###

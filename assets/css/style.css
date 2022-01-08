@@ -188,3 +188,12 @@ li i {
     position: relative;
     top: 35%;
 }
+
+/* Media queries */
+
+/* For small screen sizes 500px and down */
+@media screen and (max-width: 500px) {
+    #quiz-container {
+        height: 100%;
+    }
+}
