@@ -1,48 +1,55 @@
-# **Jonnas Anti-Aging**
-Jonnas Anti-Age website is targeted toward women 40+, who are worried about aging and getting wrinkles. The site helps them with some easy tips to delay wrinkles and gives them an irresistible offer - a free consultation. 
+# **spaceQuiz**
+spaceQuiz website is for people who are interested in space and want to test their knowledge of the subject. The site gives the user ten questions with four answer options each, and one of them is the correct answer. 
 
-**Link to the website:** https://danjtl.github.io/jonnas-anti-age/
+**Link to the website:** https://danjtl.github.io/spaceQuiz/
 
-![Responsive website](assets/images/jonnas-anti-aging-website.jpg)
+![Responsive website](assets/images/spacequiz_website.jpg)
 ***
 
 ## **Features**
 ---
 
-### **Navigation** 
+### **Question Area** 
 
-Navigation menu is at the top and is easy to find and simple to use. When the user hovers over the links, it changes color to indicate it is clickable.  
+In the upper part of the quiz, the question is clearly displayed in the middle to the user. In the top right the user see the website logo and name.  
 
-![Navigation](assets/images/navigation.jpg)
+![Question Area](assets/images/question_area.jpg)
 
-### **Main Image And text Section**
+### **Answer Area**
 
-The user can immediately see what the website is about. The site uses a big headline to capture the user interest and have an easy way to navigate further by clicking the "Anti-Aging Tips"-button.
+Underneath the question area the associated answer options will be shown for the user. The user can choose one of four answer options. 
 
-![Main image and text section](assets/images/homepage.jpg)
+![Answer Area](assets/images/answer_area.jpg)
 
-### **Anti-Aging Tips Section**
+### **Make a choice**
 
-The user receives three simple tips to prevent wrinkles as well as a recommendation to seek the help of a professional skin therapist. They see the offer of a free consultation in the third column and can easily navigate further by pressing the button.
+If the user has not selected an answer, the user can not proceed to the next question. An alert box will appear telling the user to make a selection. 
 
-![Anti-Aging Tips section](assets/images/tips.jpg)
+![Make a choice](assets/images/make_choice.jpg)
+
+### **Made a choice**
+
+When the user has made his choice, the answer option is selected and changes its color. This makes it easy for the user to both see and understand the choice the user has made. 
+![Made a choice](assets/images/choice_made.jpg)
+
+### **Submit Button**
+
+When the user has made his choice, he clicks on the submit button and the next question is displayed with its answer options. 
+
+![Submit Button](assets/images/submit_button.jpg)
+***
+
+### **New Question**
+
+When the user sees the next question, his previous answer option has been deselected and the user can now select his new answer. 
+
+![New Question](assets/images/new_question.jpg)
+***
 
 ### **Footer**
 
 A simple design that provide clear links to all social media platforms. The links opens up in a new tab when clicked.
 ![Footer](assets/images/footer.jpg)
-
-### **Contact Page**
-
-The contact page show the user how to contact the company by phone, email and visiting address. 
-![Contact page](assets/images/contactpage.jpg)
-
-### **Free Consultation Page**
-
-This page offers the user a free consultation. They can easily fill in their first name, last name and email to take advantage of the irresistible offer. 
-
-![Free consultation page](assets/images/free-consultation.jpg)
-***
 
 ## **UX**
 ---
