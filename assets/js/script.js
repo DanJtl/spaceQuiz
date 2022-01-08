@@ -63,7 +63,7 @@ let questions = [
         correctAnswer: "choiceB"
     },
     {
-        question: "What entity boasts a gravitational pull so powerful even light cannot escape?",
+        question: "What is so powerful that even light cannot escape?",
         choiceA: "A neutron star",
         choiceB: "A black hole",
         choiceC: "A supergiant star",
