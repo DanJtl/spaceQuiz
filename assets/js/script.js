@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
-// Define required variables
-
+// define required variables
 let currentQuestion = 0;
 let score = 0;
 let answerA = document.getElementById("answer-a");
@@ -12,8 +11,7 @@ let choices = document.getElementsByClassName("choice");
 let containerQuiz = document.getElementById("quiz-container");
 let choice = document.getElementsByClassName("choice");
 
-// Store questions and answers in this object array
-
+// store questions and answers in this object array
 let questions = [
 
     {
@@ -98,15 +96,14 @@ let questions = [
     },
 ];
 
-// Get reference to button and add event listener
-
+// get reference to button and add event listener
 let nextQuestion = document.getElementById("next-question");
 nextQuestion.addEventListener("click", getNextQuestion);
 
 displayQuestion();
 
 /**
-* Load the site with quiz questions and answers
+* load the site with quiz questions and answers
 */
 function displayQuestion() {
 
@@ -122,20 +119,21 @@ function displayQuestion() {
     answerD.innerHTML = currentQuestionData.choiceD;
 }
 
+/**
+ * check if the user has made a choice 
+ */
 function getNextQuestion() {
     // learned "checked radiobutton" code here: https://tinyurl.com/59ddenvd
-
     if (document.querySelectorAll('input[type="radio"]:checked').length === 0) {
         alert("Make your choice please...");
 
     } else if (currentQuestion < questions.length-1) {
-
         currentQuestion++;
         deselectAnswer();
         displayQuestion();
 
     } else {
-        // learned reload button here: https://tinyurl.com/39e3f3pn
+        // learned play again button here: https://tinyurl.com/39e3f3pn
         containerQuiz.innerHTML = `
         <h2 class="score">You scored: ${score}/${questions.length}</h2>
         <button class="playAgain" onClick="window.location.reload()">PLay again!</button>
@@ -143,11 +141,18 @@ function getNextQuestion() {
     }
 }
 
+/**
+ * deselect the choice on next quetion
+ */
 function deselectAnswer() {
-
     // learned code here: https://tinyurl.com/yc5a78th
     for (i = 0; i < choice.length; i++)
     {
         choice[i].checked = false;
     }
 }
+
+function scoreCounter() {
+
+}
+   
