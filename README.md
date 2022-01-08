@@ -73,15 +73,13 @@ Was inspired by this design when I built spaceQuiz.
 
 - **All links and buttons work.** Every link and button have been checked and works as planned. 
 
-- **Form works.** The form works as planned and is submiting the information correct.
-
 **HTML** - No errors were detected with official W3C validator.
 
-Link: https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanjtl.github.io%2Fjonnas-anti-age%2Findex.html
+Link: https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanjtl.github.io%2FspaceQuiz%2F
 
 **CSS** - No errors were detected with official (Jigsaw) validator.
 
-Link: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fdanjtl.github.io%252Fjonnas-anti-age%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv
+Link: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanjtl.github.io%2FspaceQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv
 
 **Accessibility report:**
 
@@ -104,12 +102,12 @@ No unfixed bugs.
 ### **Languages** ##
 - HTML
 - CSS
+- JavaScript
 
 ### **Programs** ###
 - Gitpod: Used for writing code.
 - Git: Used for version-control.
 - GitHub: Used for store data and hosting platform.
-- Balsamiq: Used for wireframe.
 ***
 
 ## **Deployment** ##
@@ -121,7 +119,7 @@ Steps to deployment:
 - Select Pages from the side menu
 - Under the source drop-down menu, select Main
 
-Link to the website: https://danjtl.github.io/jonnas-anti-age/index.html
+Link to the website: https://danjtl.github.io/spaceQuiz/
 ***
 
 ## **Credits** ##
@@ -130,14 +128,13 @@ Credit to my brother Jimmy Junttila to help me solve a few functions.
 ### **Images** ###
 Pictures is taken from https://www.canva.com/
 ### **Colors** ###
-The color palette used is from https://mycolor.space/ca
+The color palette used is from https://paperheartdesign.com/blog/color-palette-awesome-space
 ### **Fonts** ###
 Fonts is taken from https://fonts.google.com/
 ### **Icons** ###
 Icons is taken from https://fontawesome.com/
 ### **Codes** ###
  
-- CSS code - flex direction learned from https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
-- CSS code - justify-content learned from https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
-- CSS code - box-shadow learned from https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
-- CSS code - transition learned from https://www.w3schools.com/css/css3_transitions.asp
+- JavaScript code - learned "checked radiobutton" code here: https://tinyurl.com/59ddenvd
+- JavaScript code - learned play again button here: https://tinyurl.com/39e3f3pn
+- JavaScript code - learned code here: https://tinyurl.com/yc5a78th

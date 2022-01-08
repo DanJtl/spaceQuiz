@@ -71,7 +71,7 @@ let questions = [
         correctAnswer: "choiceB"
     },
     {
-        question: "What is the most common type of star found in the Milky Way?",
+        question: "What is the most common type of star in the Milky Way?",
         choiceA: "Red dwarf stars",
         choiceB: "Protostars",
         choiceC: "White dwarf stars",
