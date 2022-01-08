@@ -46,6 +46,12 @@ When the user sees the next question, his previous answer option has been desele
 ![New Question](assets/images/new_question.jpg)
 ***
 
+### **Score Page**
+
+Once the user has gone through all the questions, the user gets to see how many of the question was answered rigth. The user also has the opportunity to replay the quiz by clicking the "Play Again!" button. 
+
+![New Question](assets/images/score_page.jpg)
+
 ### **Footer**
 
 A simple design that provide clear links to all social media platforms. The links opens up in a new tab when clicked.
@@ -80,6 +86,10 @@ Link: https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanjtl.github.io%2FspaceQui
 **CSS** - No errors were detected with official (Jigsaw) validator.
 
 Link: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanjtl.github.io%2FspaceQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv
+
+**JavaScript** - No warnings were detected when testing the code on JSHint website.
+
+Link: https://jshint.com/
 
 **Accessibility report:**
 
@@ -125,6 +135,7 @@ Link to the website: https://danjtl.github.io/spaceQuiz/
 ## **Credits** ##
 ---
 Credit to my brother Jimmy Junttila to help me solve a few functions. 
+I have taken inspiration from a YouTube channel called Florin Pop. Some code used in this video, was partially used for my own application. -  https://www.youtube.com/watch?v=dtKciwk_si4&t=3514s
 ### **Images** ###
 Pictures is taken from https://www.canva.com/
 ### **Colors** ###
@@ -133,6 +144,10 @@ The color palette used is from https://paperheartdesign.com/blog/color-palette-a
 Fonts is taken from https://fonts.google.com/
 ### **Icons** ###
 Icons is taken from https://fontawesome.com/
+### **Questions** ###
+Questions is taken from:
+- https://icebreakerideas.com/space-trivia/
+- https://quizglobal.com/quizplay/quizplayqanda/Space%20Quiz%20Questions%20and%20Answers
 ### **Codes** ###
  
 - JavaScript code - learned "checked radiobutton" code here: https://tinyurl.com/59ddenvd
