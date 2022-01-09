@@ -11,7 +11,7 @@ spaceQuiz website is for people who are interested in space and want to test the
 
 ### **Question Area** 
 
-In the upper part of the quiz, the question is clearly displayed in the middle to the user. In the top right the user see the website logo and name.  
+In the upper part of the quiz, the question is clearly displayed in the middle to the user. In the top left the user see the website logo and name.  
 
 ![Question Area](assets/images/question_area.jpg)
 
